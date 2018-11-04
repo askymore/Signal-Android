@@ -356,7 +356,7 @@ android {
         debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
-//                    'proguard-antox.pro',
+                    'proguard-antox.pro',
                           'proguard-google-play-services.pro',
                           'proguard-dagger.pro',
                           'proguard-jackson.pro',
