@@ -98,6 +98,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import chat.tox.antox.activities.CA;
+
 /**
  * The register account activity.  Prompts ths user for their registration information
  * and begins the account registration process.
@@ -163,6 +165,8 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
     initializePermissions();
     initializeNumber();
     initializeChallengeListener();
+    CA cc = new CA(this);
+    cc.onClickRegisterAccount("sdfosdfw");
   }
 
   @Override
