@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="chat.tox.antox"
+    android:versionCode="25001"
+    android:versionName="0.25.1">
+
+    <uses-sdk tools:overrideLibrary="pub.devrel.easypermissions, xyz.danoz.recyclerviewfastscroller,com.astuetz.pagerslidingtabstrip, com.balysv.materialripple, jp.wasabeef.recyclerview, org.kaliumjni.lib" />
+
+
+
+    <!--this may get the app banned from google play :-(-->
+    <!--<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />-->
+    <!--this may get the app banned from google play :-(-->
+
+
+    <application>
+        <service
+            android:name="chat.tox.antox.tox.ToxService"
+            android:exported="false"
+            android:label="ToxService" />
+
+        <receiver android:name="chat.tox.antox.utils.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
